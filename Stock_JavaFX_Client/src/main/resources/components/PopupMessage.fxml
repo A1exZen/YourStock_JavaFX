@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox stylesheets="@../css/popup.css" fx:id="popupContainer" alignment="CENTER_LEFT" spacing="10.0" styleClass="popup-message" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.PopupMessageController">
+     <Label fx:id="messageLabel" styleClass="popup-text" text="Your account has been saved" />
+    <ImageView fx:id="closeButton" fitHeight="18" fitWidth="18" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true" styleClass="popup-close" />
+   <padding>
+      <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+   </padding>
+</HBox>

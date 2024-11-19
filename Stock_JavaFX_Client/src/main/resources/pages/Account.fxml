@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="885.0" stylesheets="@../css/account.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.Account">
+    <Label fx:id="title" layoutX="20.0" layoutY="14.0" prefHeight="44.0" prefWidth="193.0" styleClass="page-title" text="Мой Аккаунт">
+        <font>
+            <Font name="Nunito Bold" size="30.0" />
+        </font>
+    </Label>
+    <Label fx:id="role_label" alignment="CENTER" layoutX="223.0" layoutY="16.0" prefHeight="34.0" prefWidth="90.0" styleClass="role-label" text="Admin" textAlignment="CENTER">
+        <font>
+            <Font name="Nunito Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <AnchorPane fx:id="detailsForm" styleClass="modal" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="80.0">
+        <Label fx:id="modalTitle" alignment="CENTER" layoutX="13.0" layoutY="14.0" prefHeight="40.0" prefWidth="431.0" style="-fx-padding: 0 0 10px 0;" styleClass="modal-title" text="Личные данные" textAlignment="CENTER">
+            <font>
+                <Font name="Nunito Regular" size="14.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="passwordField" layoutX="29.0" layoutY="133.0" minWidth="150.0" prefHeight="34.0" prefWidth="409.0" promptText="*******" />
+        <TextField fx:id="addressField" layoutX="202.0" layoutY="303.0" minWidth="200.0" prefHeight="34.0" prefWidth="234.0" promptText="ул. Пушкина д.10" styleClass="text-field-modal" />
+        <TextField fx:id="cityField" layoutX="24.0" layoutY="303.0" minWidth="120.0" prefHeight="34.0" prefWidth="162.0" promptText="Минск" styleClass="text-field-modal" />
+        <Button fx:id="buttonEdit" layoutX="125.0" layoutY="409.0" onAction="#handleChangeData" prefHeight="34.0" prefWidth="222.0" styleClass="button-green" text="Изменить" />
+        <TextField fx:id="emailField" layoutX="203.0" layoutY="236.0" minWidth="200.0" prefHeight="34.0" prefWidth="233.0" promptText="user123@gmail.com" styleClass="text-field-modal" />
+        <ProgressBar fx:id="progressBar" layoutX="44.0" layoutY="456.0" minWidth="300.0" prefHeight="18.0" prefWidth="371.0" progress="0.0" />
+        <TextField fx:id="phoneField" layoutX="24.0" layoutY="236.0" minWidth="120.0" prefHeight="34.0" prefWidth="161.0" promptText="+375291111111" styleClass="text-field-modal" />
+        <TextField fx:id="nameField" layoutX="27.0" layoutY="73.0" minWidth="100.0" prefHeight="34.0" prefWidth="410.0" promptText="user123" styleClass="text-field-modal" />
+        <Label layoutX="29.0" layoutY="54.0" text="Логин">
+            <font>
+                <Font name="Nunito Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="29.0" layoutY="113.0" text="Пароль">
+            <font>
+                <Font name="Nunito Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="215.0" text="Номер телефона">
+            <font>
+                <Font name="Nunito Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="205.0" layoutY="215.0" text="Электронная почта">
+            <font>
+                <Font name="Nunito Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="282.0" text="Город">
+            <font>
+                <Font name="Nunito Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="202.0" layoutY="282.0" text="Адрес">
+            <font>
+                <Font name="Nunito Regular" size="14.0" />
+            </font>
+        </Label>
+        <ProgressIndicator fx:id="progressIndicator" layoutX="377.0" layoutY="406.0" prefHeight="263.0" prefWidth="26.0" progress="0.0" />
+        <Line  endX="308.0" layoutX="125.0" layoutY="193.0" startX="-100.0" stroke="#b7b7b7" />
+    </AnchorPane>
+
+    <TableView fx:id="activityTable" prefWidth="276.0" styleClass="table-view" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="200.0" text="ФИО" />
+            <TableColumn fx:id="phoneColumn" prefWidth="120" text="Телефон" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView> <!-- Модальное окно для подтверждения удаления --> <!-- <AnchorPane fx:id="confirmDeleteModal" layoutX="260.0" layoutY="200.0" prefHeight="129.0" prefWidth="245.0" styleClass="del-modal" visible="false">--> <!-- <Label layoutX="21.0" layoutY="20.0" prefHeight="36.0" prefWidth="222.0" styleClass="del-modal-title" text="Подтвердите удаление!" textAlignment="CENTER" />--> <!-- <HBox alignment="CENTER" layoutX="20.0" layoutY="80.0" prefHeight="26.0" prefWidth="222.0" spacing="20.0">--> <!-- <Button fx:id="confirmDeleteButton" onAction="#handleConfirmDelete" styleClass="del-button-danger" text="Удалить" />--> <!-- <Button fx:id="cancelDeleteButton" onAction="#handleCancelDelete" styleClass="del-button-secondary" text="Отмена" />--> <!-- </HBox>--> <!-- </AnchorPane>--> <!-- Модальное окно для добавления поставщика -->
+
+    <Button fx:id="exitButton" styleClass="button-danger" text="Выход" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+</AnchorPane>

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
+.popup-message {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+    -fx-border-color: transparent;
+    -fx-border-radius: 10;
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-alignment: center-left;
+    -fx-spacing: 10;
+}
+
+.popup-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.popup-close {
+    -fx-font-size: 12px;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+.success {
+    -fx-background-color: rgba(85, 255, 93, 0.8);
+}
+
+.error {
+    -fx-background-color: rgba(255, 87, 74, 0.8);
+}
+
+.warning {
+    -fx-background-color: rgba(255, 170, 65, 0.8);
+}
+
+.info {
+    -fx-background-color: rgba(65, 171, 255, 0.8);
+}

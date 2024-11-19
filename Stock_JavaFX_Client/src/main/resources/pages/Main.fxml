@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600" prefWidth="1000" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.Main">
+
+    <left>
+        <StackPane>
+            <VBox fx:id="navbar" styleClass="navbar">
+                <!-- Кнопка для сворачивания/разворачивания -->
+                <HBox style="-fx-padding: 0 0 0 7">
+                    <Button fx:id="toggleButton" styleClass="navbar-toggle-button">
+                        <graphic>
+                            <ImageView fx:id="toggleIcon" fitHeight="20" fitWidth="20" preserveRatio="true">
+                                <Image url="@../images/light/menu-burger.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+                <!-- Меню -->
+                <VBox fx:id="menuItems" spacing="7">
+                    <HBox styleClass="navbar-item" onMouseClicked="#navigateToMaterials">
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <Image url="@../images/light/layers.png"/>
+                        </ImageView>
+                        <Label styleClass="navbar-label" text="Материалы"/>
+                    </HBox>
+                    <HBox styleClass="navbar-item" onMouseClicked="#navigateToProducts">
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <Image url="@../images/light/shopping-cart.png"/>
+                        </ImageView>
+                        <Label styleClass="navbar-label" text="Продукты"/>
+                    </HBox>
+                    <HBox styleClass="navbar-item" onMouseClicked="#navigateToSuppliers">
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <Image url="@../images/light/users-alt.png"/>
+                        </ImageView>
+                        <Label styleClass="navbar-label" text="Поставщики"/>
+                    </HBox>
+                    <HBox styleClass="navbar-item" onMouseClicked="#navigateToCustomers">
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <Image url="@../images/light/users.png"/>
+                        </ImageView>
+                        <Label styleClass="navbar-label" text="Покупатели"/>
+                    </HBox>
+                    <HBox styleClass="navbar-item" onMouseClicked="#navigateToUsers">
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <Image url="@../images/light/address-book.png"/>
+                        </ImageView>
+                        <Label styleClass="navbar-label" text="Пользователи"/>
+                    </HBox>
+                    <HBox styleClass="navbar-item" onMouseClicked="#navigateToAccount">
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <Image url="@../images/light/info.png"/>
+                        </ImageView>
+                        <Label styleClass="navbar-label" text="Аккаунт"/>
+                    </HBox>
+                </VBox>
+                <Region fx:id="spacer" VBox.vgrow="ALWAYS"/>
+
+                <HBox style="-fx-padding: 0 0 10 7">
+                    <Button fx:id="exitButton" onAction="#handleExitButton" styleClass="navbar-exit-button">
+                        <graphic>
+                            <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                                <Image url="@../images/light/exit.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+            </VBox>
+        </StackPane>
+    </left>
+
+    <!-- Центральная часть (контент) -->
+    <center>
+        <StackPane fx:id="contentArea">
+        </StackPane>
+    </center>
+</BorderPane>

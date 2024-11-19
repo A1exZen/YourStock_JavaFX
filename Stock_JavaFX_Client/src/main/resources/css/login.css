@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*{
+    -fx-font-family: "Nunito";
+}
+.root {
+    -fx-background-color: #F5F5F5;
+}
+
+.label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #333333;
+}
+
+.buttonMain {
+    -fx-background-color: #0000ff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.buttonMain:hover {
+    -fx-background-color: #00009f;
+}
+
+/* PasswordField and TextField styling */
+.text-field, .password-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 5;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.label-error {
+    -fx-text-fill: red;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.label-welcome {
+    -fx-font-size: 30px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+#logo1{
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-background-color: rgba(0, 0, 255, 0);
+}
+.logo2 {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px; /* Закругление углов фона */
+    -fx-border-radius: 10px; /* Закругление углов границы */
+    -fx-background-color: linear-gradient(to right, rgb(13, 8, 101) 0%, rgb(89, 28, 168) 39%, rgb(2, 85, 192) 100%);
+}
+
+.outlineButton{
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+    -fx-background-color: rgba(0, 0, 255, 0);
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10;
+    -fx-padding: 10px 20px;
+}
+.outlineButton:hover{
+    -fx-background-color: #dedede;
+}
+
+.popup-message {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-border-color: #333333;
+    -fx-border-radius: 5;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.0, 0, 1);
+}

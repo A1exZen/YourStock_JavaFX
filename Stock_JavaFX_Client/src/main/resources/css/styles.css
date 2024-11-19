@@ -1,0 +1,70 @@
+/* Общие стили для кнопок */
+.button {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8;
+    -fx-text-fill: #444;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+}
+.button:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-cursor: hand;
+}
+svg{
+    fill: white;
+}
+/* Стили для навбара */
+.navbar {
+    -fx-background-color: #333;
+    -fx-padding: 10;
+    -fx-spacing: 35;
+    -fx-alignment: TOP_LEFT;
+
+}
+
+/* Кнопка сворачивания навбара */
+.navbar-toggle-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+.navbar-exit-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+.navbar-toggle-button:hover {
+    -fx-background-color: #3a3d42;
+}
+.navbar-exit-button:hover {
+    -fx-background-color: #3a3d42;
+}
+
+/*.menu-items{*/
+/*    -fx-alignment: CENTER;*/
+/*}*/
+.navbar-item {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 10;
+    -fx-padding: 10 15;
+    -fx-cursor: hand;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.navbar-item:hover {
+    -fx-background-color: #3a3d42;
+}
+
+.navbar-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.welcome-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: #3a3d42;
+    -fx-font-weight: bold;
+}
